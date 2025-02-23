@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Clients - Archios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        body { 
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-[#1a1a1a] bg-opacity-95 px-4 md:px-8 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <span class="text-white flex items-center gap-2">
+                <img src="manjani-logo.png" alt="" class="h-8 w-auto">
+                <span>Manjaly</span>
+            </span>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8" id="desktop-menu">
+                <a href="index.html" class="text-gray-400 hover:text-white">Home</a>
+                <a href="about.html" class="text-gray-400 hover:text-white">About</a>
+                <a href="projects.html" class="text-gray-400 hover:text-white">Work</a>
+                <a href="#" class="text-white">Clients</a>
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+            </div>
+            <!-- Hamburger Button -->
+            <button class="md:hidden text-white" id="menu-toggle">
+                <i class="ri-menu-line text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-[#242424] absolute top-full left-0 right-0 p-4 border-t border-gray-800" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-400 hover:text-white">Home</a>
+                <a href="about.html" class="text-gray-400 hover:text-white">About</a>
+                <a href="projects.html" class="text-gray-400 hover:text-white">Work</a>
+                <a href="#" class="text-white">Clients</a>
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" 
+                 alt="Hero Background" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8 text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6" data-aos="fade-down">
+                Our Valued Clients
+            </h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Trusted by industry leaders across different sectors
+            </p>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="py-20 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Category Headers -->
+            <div class="space-y-20">
+                <!-- Residential Section -->
+                <div id="residential-section">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12" data-aos="fade-up">Residential Clients</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 justify-items-center" data-category="Residential">
+                        <!-- Residential clients will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Commercial Section -->
+                <div id="commercial-section">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12" data-aos="fade-up">Commercial Clients</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" data-category="Commercial">
+                        <!-- Commercial clients will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Industrial Section -->
+                <div id="industrial-section">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12" data-aos="fade-up">Industrial Clients</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" data-category="Industrial">
+                        <!-- Industrial clients will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Institutional Section -->
+                <div id="institutional-section">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12" data-aos="fade-up">Institutional Clients</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" data-category="Institutional">
+                        <!-- Institutional clients will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Hospitality Section -->
+                <div id="hospitality-section">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12" data-aos="fade-up">Hospitality Clients</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" data-category="Hospitality">
+                        <!-- Hospitality clients will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a1a1a] py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Us</h3>
+                    <p class="text-gray-400">Creating exceptional architectural solutions for over two decades.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p class="text-gray-400">info@archios.com</p>
+                    <p class="text-gray-400">+1 (555) 123-4567</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Location</h3>
+                    <p class="text-gray-400">123 Architecture Ave</p>
+                    <p class="text-gray-400">New York, NY 10001</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="ri-instagram-line"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="ri-twitter-line"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="ri-linkedin-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+
+    <!-- Add this script before the closing body tag -->
+    <script>
+        // Initialize Supabase client
+        const { createClient } = supabase;
+        const supabaseClient = createClient(
+            'https://olkcohyhgnsdwihrhtpt.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9sa2NvaHloZ25zZHdpaHJodHB0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDAyOTMzMTgsImV4cCI6MjA1NTg2OTMxOH0.QJVOWw3gwsapcWwbeIHncNrJbb0obbqoM3o97Fc955Q'
+        );
+
+        // Load clients from Supabase
+        async function loadClients() {
+            try {
+                const { data, error } = await supabaseClient
+                    .from('clients')
+                    .select('*')
+                    .order('created_at', { ascending: false });
+
+                if (error) throw error;
+
+                // Get all category sections
+                const categories = ['Residential', 'Commercial', 'Industrial', 'Institutional', 'Hospitality'];
+                
+                categories.forEach(category => {
+                    const categoryGrid = document.querySelector(`[data-category="${category}"]`);
+                    const categoryClients = data.filter(client => client.category === category);
+                    
+                    if (categoryClients.length === 0) {
+                        // Hide empty sections
+                        document.getElementById(`${category.toLowerCase()}-section`).style.display = 'none';
+                        return;
+                    }
+
+                    // Show section and populate clients
+                    document.getElementById(`${category.toLowerCase()}-section`).style.display = 'block';
+                    categoryGrid.innerHTML = categoryClients.map(client => `
+                        <div class="w-full max-w-[300px] rounded-lg overflow-hidden text-center" data-aos="fade-up">
+                            <div class="h-[200px] sm:h-[250px] md:h-[300px] w-full bg-[#242424] flex items-center justify-center">
+                                <img src="${client.image_url}" 
+                                     alt="${client.name}" 
+                                     class="max-w-full max-h-full object-contain p-4">
+                            </div>
+                            <div class="p-4 bg-[#1a1a1a]">
+                                <h3 class="text-lg md:text-xl font-bold text-center">${client.name}</h3>
+                            </div>
+                        </div>
+                    `).join('');
+                });
+                // Refresh AOS for new elements
+                AOS.refresh();
+
+            } catch (error) {
+                console.error('Error loading clients:', error);
+                categories.forEach(category => {
+                    const categoryGrid = document.querySelector(`[data-category="${category}"]`);
+                    categoryGrid.innerHTML = '<p class="text-red-500 col-span-4 text-center">Error loading clients</p>';
+                });
+            }
+        }
+
+        // Load clients when page loads
+        loadClients();
+    </script>
+
+    <script>
+        // Hamburger menu functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        menuToggle.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            mobileMenu.classList.toggle('hidden');
+            menuToggle.innerHTML = isMenuOpen 
+                ? '<i class="ri-close-line text-2xl"></i>' 
+                : '<i class="ri-menu-line text-2xl"></i>';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (isMenuOpen && !e.target.closest('#mobile-menu') && !e.target.closest('#menu-toggle')) {
+                mobileMenu.classList.add('hidden');
+                menuToggle.innerHTML = '<i class="ri-menu-line text-2xl"></i>';
+                isMenuOpen = false;
+            }
+        });
+
+        // Close mobile menu when window is resized to desktop size
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768 && isMenuOpen) {
+                mobileMenu.classList.add('hidden');
+                menuToggle.innerHTML = '<i class="ri-menu-line text-2xl"></i>';
+                isMenuOpen = false;
+            }
+        });
+    </script>
+</body>
+</html>
